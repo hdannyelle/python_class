@@ -7,17 +7,157 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
 
     <title>News</title>
   </head>
   <body>
+  {% load static %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">SHIELD</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Policy
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Course Audit</a>
+              <a class="dropdown-item" href="#">Events Audit</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Student Theses</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">News</a>
+          </li>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <img src="{% static 'masthead.jpg' %}" alt="" height="850">
+    </div>
+         <!-- Masthead-->
+<!--          <header class="masthead">
+          <div class="container">
+              <div><img src="{% static 'DSCF1390.jpg' %}" alt="" width="450" height="98"></div>
+              <div class="masthead-heading text-uppercase">Policy that works for everyone</div>
+              <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Learn More</a>
+          </div>
+      </header>
+ -->
+    <!-- Main Body-->
+      <!--About Section-->
+      <section style="background:white;" class="page-section" id="services" style="background-color: #e6e8e6;">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">About</h2>
+                <h3 class="section-subheading text-muted">SHIELD is a student lead advocacy group based at The Hertie School in Berlin.</h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <img class="mx-auto rounded-circle" src="{% static '01-advocate.jpg' %}" width="150" height="150" alt="" />
+                    <h4 class="my-3">Advocacy</h4>
+                    <p class="text-muted">In our work, we promote and research policy solutions to issues of diversity, inclusion, and discrimination.</p>
+                </div>
+                <div class="col-md-4">
+                    <img class="mx-auto rounded-circle" src="{% static '02-events.jpg' %}" width="150" height="150" alt="" />
+                    <h4 class="my-3">Events</h4>
+                    <p class="text-muted">To promote the issues and raise awareness of progressive solutions, we host events with expert speakers.</p>
+                </div>
+                <div class="col-md-4">
+                    <img class="mx-auto rounded-circle" src="{% static '03-policy.jpg' %}" width="150" height="150" alt="" />
+                    <h4 class="my-3">Policy</h4>
+                    <p class="text-muted">Leveraging student knowledge in policy and international affairs, we take a look at how to make The Hertie School a leader in Diversity & Inclusion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!-- Team-->
+            <section style="background: #E8E8E8;" class="page-section" id="team">
+              <div class="container">
+                  <div class="text-center">
+                      <h2 class="section-heading text-uppercase">Our Amazing Executive Board</h2>
+                      <h3 class="section-subheading text-muted">Our members are responsible for pushing SHIELD further.</h3>
+                  </div>
+                  <div class="row">
+                      <div class="col-lg-4">
+                          <div class="team-member">
+                              <img class="mx-auto rounded-circle" src="{% static 'dannyelle.png' %}" alt="" width="150" height="150"/>
+                              <h4>Dannyelle Thompson</h4>
+                              <p class="text-muted">Founder and Senior Chair</p>
+                          </div>
+                      </div>
+                      <div class="col-lg-4">
+                          <div class="team-member">
+                              <img class="mx-auto rounded-circle" src="{% static 'eduardo.jpg' %}" alt="" width="150" height="150"/>
+                              <h4>Eduardo Campbell</h4>
+                              <p class="text-muted">Junior Co-Chair</p>
+                          </div>
+                      </div>
+                      <div class="col-lg-4">
+                          <div class="team-member">
+                              <img class="mx-auto rounded-circle" src="{% static 'diksha.jpg' %}" alt="" width="150" height="150"/>
+                              <h4>Diksha Choudhary</h4>
+                              <p class="text-muted">Junior Co-Chair</p>
+                          </div>
+                      </div>
+                      <div class="row">
+                      <div class="col-lg-3">
+                          <div class="team-member">
+                              <img class="mx-auto rounded-circle" src="{% static 'becca.jpeg' %}" alt="" width="150" height="150"/>
+                              <h4>Becca Burgmeier</h4>
+                              <p class="text-muted">Deputy Chair of Coordination</p>
+                          </div>
+                      </div>
+                      <div class="col-lg-3">
+                          <div class="team-member">
+                              <img class="mx-auto rounded-circle" src="{% static 'babs.jpeg' %}" alt="" width="150" height="150"/>
+                              <h4>Babatunde Williams</h4>
+                              <p class="text-muted">Deputy Chair of Events</p>
+                          </div>
+                      </div>
+                      <div class="col-lg-3">
+                          <div class="team-member">
+                              <img class="mx-auto rounded-circle" src="{% static 'lena.jpeg' %}" alt="" width="150" height="150"/>
+                              <h4>Lena Wagner</h4>
+                              <p class="text-muted">Deputy Chair of Outreach & Communication</p>
+                          </div>
+                      </div>
+                      <div class="col-lg-3">
+                          <div class="team-member">
+                              <img class="mx-auto rounded-circle" src="{% static 'caro.jpeg' %}" alt="" width="150" height="150"/>
+                              <h4>Carol Cavallari</h4>
+                              <p class="text-muted">Liaison to the Administration</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Executive Board membership carries responsibility and continuous work and contribution to the work and goals of SHIELD. We thank our EBoard for their dedication!</p></div>
+                  </div>
+              </div>
+          </section>
   
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">News</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  </nav>
     {% block body %}
     {% endblock %}
 
