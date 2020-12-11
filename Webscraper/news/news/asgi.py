@@ -1,12 +1,9 @@
 """
 ASGI config for news project.
 
-It exposes the ASGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/3.1/howto/deployment/asgi/
 """
 
+#Application callable when the startproject function was used to create an app
 import os
 
 from django.core.asgi import get_asgi_application

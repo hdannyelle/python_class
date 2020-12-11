@@ -1,6 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+#Created function called 'home'where the request package
+#requests come from newsapi in json format
+#set parameters for the request for keyworks, timeframe, and sort order
+#it gets returned to the home.html file
 def home(request):
     import requests
     import json

@@ -5,6 +5,7 @@
   <h1 style="text-align: center">NEWS IN DIVERSITY</h1>
   <h2 style="text-align: center">Our python course project focuses on drawing news related to diversity from newsapi.org.</h2>
 <div class="row">
+ <!-- created for loop for components of metadata from api news articles, including image, url, description, title -->
     {% for x in api.articles %}
     <div class="col-sm">
         <div class="card" style="width: 18rem;">
@@ -22,3 +23,4 @@
 </div>
 {% endblock %}
 
+ <!-- page extends to base.html file, contained within block body and endblock -->
