@@ -1,7 +1,7 @@
-<!-- All CSS and HTML for remaining parts of the website -->
+<!-- All and HTML for remaining parts of the website. The CSS is called from the Bootstrap theme provided. -->
 <!doctype html>
 <html lang="en">
-  <head>
+  <head> <!-- Important meta data and theme style is stored in the header.-->
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,9 +12,11 @@
 
     <title>News</title>
   </head>
-  <body>
-  {% load static %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <body> <!-- This begins the body of the webpage-->
+  {% load static %} <!-- Django requires the dev to load 'static' as a way to store all imgs and css in one location for Django to call easily. -->
+  <!--Navigation Bar-->
+  <!------------------>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
       <a class="navbar-brand" href="#">SHIELD</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -57,15 +59,6 @@
     <div class="container-fluid">
       <img src="{% static 'masthead.jpg' %}" alt="" height="850">
     </div>
-         <!-- Masthead-->
-<!--          <header class="masthead">
-          <div class="container">
-              <div><img src="{% static 'DSCF1390.jpg' %}" alt="" width="450" height="98"></div>
-              <div class="masthead-heading text-uppercase">Policy that works for everyone</div>
-              <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Learn More</a>
-          </div>
-      </header>
- -->
     <!-- Main Body-->
       <!--About Section-->
       <section style="background:white;" class="page-section" id="services" style="background-color: #e6e8e6;">

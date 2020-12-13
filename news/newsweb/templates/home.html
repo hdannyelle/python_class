@@ -1,3 +1,5 @@
+<!-- Creates a call from the baseline html to integrate the python code. 
+  This separation of code makes it easier to read and separates python code from html and css-->
 {% extends "base.html" %}
 {% block body %}
 
@@ -8,19 +10,19 @@
  <!-- created for loop for components of metadata from api news articles, including image, url, description, title -->
     {% for x in api.articles %}
     <div class="col-sm">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem;"> <!-- Using bootstrap components, the loop directs the data into a 'card' to display.-->
           <img src="{{x.urlToImage}}" class="card-img-top"  alt="{{x.source.name}}">
           <div class="card-body">
             <h5 class="card-title">{{x.title}}</h5>
             <p class="card-text">{{x.description|truncatechars:150}}</p>
-            <a href="{{x.url}}" target="_blank" class="btn btn-primary">Read More</a>
+            <a href="{{x.url}}" target="_blank" class="btn btn-primary">Read More</a> <!-- The viewer is then prompted to 'read more' at the original data source.-->
           </div>
       </div>
       <br>
     </div>
-    {% endfor %}
+    {% endfor %} <!-- ends the forlooop-->
     </div>
 </div>
-{% endblock %}
+{% endblock %} <!-- tells the html that the block is complete and can return to base.html-->
 
- <!-- page extends to base.html file, contained within block body and endblock -->
+ <!-- page extends to base.html file -->
